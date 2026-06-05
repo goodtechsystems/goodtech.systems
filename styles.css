@@ -1,0 +1,67 @@
+/* ==========================================================================
+   COLOR CONSTANTS (CSS Custom Properties)
+   Modify these values to test changes to the custom CSS styles.
+   ========================================================================== */
+:root {
+    --color-background: #fdf6e3;
+    --color-surface: #eee8d5;
+    --color-on-background: #657b83;
+    --color-on-surface: #586e75;
+    --color-primary: #2aa198;
+    --color-on-primary: #fdf6e3;
+    --color-secondary: #cb4b16;
+    --color-on-secondary: #fdf6e3;
+    --color-tertiary: #b58900;
+    --color-on-tertiary: #fdf6e3;
+    --color-outline: #93a1a1;
+    --color-outline-variant: #eee8d5;
+    --color-surface-container: #eee8d5;
+    --color-surface-container-low: #fdf6e3;
+    --color-surface-container-high: #eee8d5;
+    --color-surface-container-highest: #93a1a1;
+    --color-inverse-surface: #002b36;
+    --color-inverse-on-surface: #839496;
+    --color-surface-variant: #eee8d5;
+    --color-on-surface-variant: #586e75;
+
+    /* Dark Mode Palette */
+    --color-dark-background: #002b36;
+    --color-dark-surface: #073642;
+    --color-dark-on-background: #839496;
+    --color-dark-on-surface: #93a1a1;
+    --color-dark-primary: #2aa198;
+    --color-dark-secondary: #cb4b16;
+    --color-dark-tertiary: #b58900;
+}
+
+/* ==========================================================================
+   CUSTOM STYLES
+   ========================================================================== */
+.material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    vertical-align: middle;
+}
+
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+}
+
+.header-strip {
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.dark {
+    --tw-bg-opacity: 1;
+    background-color: var(--color-dark-background);
+    color: var(--color-dark-on-background);
+}
