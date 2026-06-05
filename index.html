@@ -6,6 +6,23 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Good Tech Systems | Engineering for Impact</title>
+    <meta name="description"
+        content="Good Tech Systems builds data and software tools for NGOs — digitization pipelines, data science dashboards, and custom tooling engineered to scale your impact and hand off cleanly to your team." />
+    <meta name="keywords"
+        content="NGO technology, humanitarian tech, data science for nonprofits, NGO software, digitization, ODK CommCare integration, impact measurement, custom tooling" />
+    <link rel="canonical" href="https://goodtech.systems/" />
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://goodtech.systems/" />
+    <meta property="og:title" content="Good Tech Systems | Engineering for Impact" />
+    <meta property="og:description"
+        content="We build data and software tools for NGOs — digitization, data science, and custom systems designed to amplify your impact and hand off cleanly to your team." />
+    <meta property="og:site_name" content="Good Tech Systems" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Good Tech Systems | Engineering for Impact" />
+    <meta name="twitter:description"
+        content="We build data and software tools for NGOs — digitization, data science, and custom systems designed to amplify your impact and hand off cleanly to your team." />
 
     <!-- Google Fonts -->
     <link
@@ -38,11 +55,13 @@
             </div>
             <div class="hidden md:flex items-center gap-lg" id="nav-links">
                 <a class="nav-link border-b-2 pb-1 font-label-md transition-all duration-200 text-primary font-bold border-primary"
-                    href="#hero">Mission</a>
-                <a class="nav-link border-b-2 pb-1 font-label-md transition-all duration-200 text-on-surface-variant dark:text-dark-on-background border-transparent font-medium hover:text-secondary"
-                    href="#what-we-do">Services</a>
+                    href="#mission">Mission</a>
                 <a class="nav-link border-b-2 pb-1 font-label-md transition-all duration-200 text-on-surface-variant dark:text-dark-on-background border-transparent font-medium hover:text-secondary"
                     href="#who-we-are">Team</a>
+                <a class="nav-link border-b-2 pb-1 font-label-md transition-all duration-200 text-on-surface-variant dark:text-dark-on-background border-transparent font-medium hover:text-secondary"
+                    href="#methodology">Methodology</a>
+                <a class="nav-link border-b-2 pb-1 font-label-md transition-all duration-200 text-on-surface-variant dark:text-dark-on-background border-transparent font-medium hover:text-secondary"
+                    href="#what-we-do">Services</a>
             </div>
             <div class="flex items-center gap-md">
                 <button aria-label="Toggle theme"
@@ -61,7 +80,7 @@
     </header>
     <main>
         <!-- Hero Section -->
-        <section id="hero" class="relative min-h-[819px] flex items-center pt-xxl pb-xxl px-gutter">
+        <section id="mission" class="relative min-h-[819px] flex items-center pt-xxl pb-xxl px-gutter">
             <div class="max-w-container-max mx-auto w-full grid md:grid-cols-2 items-center gap-xl">
                 <div class="z-10">
                     <div
@@ -74,7 +93,7 @@
                     </h1>
                     <p
                         class="font-body-lg text-body-lg text-on-surface-variant dark:text-dark-on-background max-w-xl mb-xl">
-                        We bridge the gap between precision analytics, high-level engineering and humanitarian needs.
+                        We bridge the gap between precision data science, engineering and humanitarian needs.
                     </p>
                     <div class="flex flex-wrap gap-md">
                         <button
@@ -82,10 +101,12 @@
                             View Case Studies
                             <span class="material-symbols-outlined">arrow_forward</span>
                         </button>
-                        <button
-                            class="border-primary border-[1.5px] text-primary px-lg py-md rounded-lg font-label-md text-body-md hover:bg-primary/5 transition-all">
-                            Our Methodology
-                        </button>
+                        <a href="#methodology">
+                            <button
+                                class="border-primary border-[1.5px] text-primary px-lg py-md rounded-lg font-label-md text-body-md hover:bg-primary/5 transition-all">
+                                Our Methodology
+                            </button>
+                        </a>
                     </div>
                 </div>
                 <div class="relative hidden md:block">
@@ -160,24 +181,81 @@
                         <h3
                             class="font-headline-md text-headline-md mb-md text-on-background dark:text-dark-on-surface">
                             Global Reach</h3>
-                        <p class="text-on-surface-variant dark:text-dark-on-background">Headquartered in Zurich,
-                            operating in
-                            Sub-Saharan Africa and Southeast Asia. We go where the impact is needed.</p>
+                        <p class="text-on-surface-variant dark:text-dark-on-background">Headquartered in the US,
+                            operating anywhere. We go where the impact is needed.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Our Methodology Section -->
+        <section class="py-xxl px-gutter" id="methodology">
+            <div class="max-w-container-max mx-auto">
+                <div class="mb-xl text-center md:text-left">
+                    <h2 class="font-headline-lg text-headline-lg text-on-background dark:text-dark-on-surface mb-sm">How
+                        We Think</h2>
+                    <p class="font-label-md text-primary tracking-widest">OUR METHODOLOGY</p>
+                </div>
+                <p
+                    class="font-body-lg text-body-lg text-on-surface-variant dark:text-dark-on-background max-w-2xl mb-xl">
+                    We come to every engagement with one assumption: the organization already knows what it needs. Our
+                    job is to conduct the research and build the tools that make your operations faster, cheaper, and
+                    more impactful — then hand them off.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+                    <!-- Principle 1 -->
+                    <div
+                        class="relative bg-surface dark:bg-dark-surface p-xl rounded-lg border border-outline/20 overflow-hidden group">
+                        <div class="header-strip bg-primary"></div>
+                        <span
+                            class="material-symbols-outlined text-secondary text-display-lg mb-md">record_voice_over</span>
+                        <div class="font-label-sm text-secondary mb-sm">01 / </div>
+                        <h3
+                            class="font-headline-md text-headline-md mb-md text-on-background dark:text-dark-on-surface">
+                            Listen First</h3>
+                        <p class="text-on-surface-variant dark:text-dark-on-background">You understand your own
+                            operations better than any outside consultant. We start by learning your workflows,
+                            constraints, and goals — not by prescribing solutions.</p>
+                    </div>
+                    <!-- Principle 2 (highlighted) -->
+                    <div
+                        class="relative bg-primary text-on-primary p-xl rounded-lg border border-primary overflow-hidden shadow-xl">
+                        <div class="header-strip bg-secondary"></div>
+                        <span class="material-symbols-outlined text-secondary text-display-lg mb-md">tune</span>
+                        <div class="font-label-sm text-on-primary/60 mb-sm">02 / </div>
+                        <h3 class="font-headline-md text-headline-md mb-md">Enhance, Don't Disrupt</h3>
+                        <p class="text-on-primary/90">We build tools that make your existing operations more
+                            cost-efficient and impactful. The work stays yours — we just make the systems that support
+                            it better.</p>
+                    </div>
+                    <!-- Principle 3 -->
+                    <div
+                        class="relative bg-surface dark:bg-dark-surface p-xl rounded-lg border border-outline/20 overflow-hidden">
+                        <div class="header-strip bg-primary"></div>
+                        <span class="material-symbols-outlined text-secondary text-display-lg mb-md">handshake</span>
+                        <div class="font-label-sm text-secondary mb-sm">03 / </div>
+                        <h3
+                            class="font-headline-md text-headline-md mb-md text-on-background dark:text-dark-on-surface">
+                            Built to Hand Off</h3>
+                        <p class="text-on-surface-variant dark:text-dark-on-background">Every system is designed from
+                            day one to be owned and operated by your team — not maintained by us indefinitely. You get
+                            clean documentation and a system your staff can run.</p>
                     </div>
                 </div>
             </div>
         </section>
         <!-- What We Do Section (Technical Grid) -->
         <section class="py-xxl px-gutter max-w-container-max mx-auto" id="what-we-do">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-xl gap-md">
-                <div class="max-w-xl">
+            <div class="max-w-container-max mx-auto">
+                <div class="mb-xl text-center md:text-left">
                     <h2 class="font-headline-lg text-headline-lg text-on-background dark:text-dark-on-surface mb-sm">
-                        What We
-                        Do</h2>
-                    <p class="font-body-md text-on-surface-variant dark:text-dark-on-background">Our core competencies
-                        are rooted
-                        in rigorous engineering standards applied to complex global challenges.</p>
+                        What We Do</h2>
+                    <p class="font-label-md text-primary tracking-widest">FULL-STACK SERVICES</p>
                 </div>
+                <p
+                    class="font-body-lg text-body-lg text-on-surface-variant dark:text-dark-on-background max-w-2xl mb-xl">
+                    Our core competencies are rooted in rigorous technical standards applied to complex global
+                    challenges.
+                </p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
                 <!-- Service 1: Digitization -->
@@ -190,18 +268,19 @@
                         </div>
                         <h4
                             class="font-headline-md text-headline-md mb-md text-on-background dark:text-dark-on-surface">
-                            Digitization</h4>
+                            Data Collection</h4>
                         <p class="text-on-surface-variant dark:text-dark-on-background mb-xl">
                             We bridge the physical-digital gap by turning paper records, forms, and archives into
-                            secure, cloud-accessible databases. Using AI-powered optical character recognition (OCR) and
-                            vision-language models, we extract critical information and connect field tools like ODK
-                            Collect and CommCare directly to your servers.
+                            secure, cloud-accessible databases. Using AI-powered optical character recognition and
+                            vision-language models, combined with human-in-the-loop UIs for maximum accuracy and
+                            throughput, we extract critical information and connect field tools like ODK Collect and
+                            CommCare directly to your servers.
                         </p>
                     </div>
                     <div class="flex flex-wrap gap-xs">
                         <span
                             class="bg-surface dark:bg-dark-surface dark:text-dark-on-background px-sm py-xs text-[10px] font-label-md rounded-full">AI-OCR
-                            & VISION</span>
+                            & VLM</span>
                         <span
                             class="bg-surface dark:bg-dark-surface dark:text-dark-on-background px-sm py-xs text-[10px] font-label-md rounded-full">ODK
                             & COMMCARE SYNC</span>
@@ -215,17 +294,18 @@
                     class="p-lg border border-outline/20 hover:border-primary transition-all duration-300 bg-background dark:bg-dark-background rounded-lg flex flex-col justify-between">
                     <div>
                         <div class="flex justify-between items-start mb-md">
-                            <div class="font-label-sm text-secondary">02 / DATA SCIENCE</div>
+                            <div class="font-label-sm text-secondary">02 / INSIGHTS</div>
                             <span class="material-symbols-outlined text-primary text-[24px]">insights</span>
                         </div>
                         <h4
                             class="font-headline-md text-headline-md mb-md text-on-background dark:text-dark-on-surface">
                             Data Science</h4>
                         <p class="text-on-surface-variant dark:text-dark-on-background mb-xl">
-                            We turn raw field logs and project data into clear, actionable intelligence. Through custom
-                            dashboards, robust monitoring and evaluation (M&E) metrics, and predictive machine learning
-                            models, we enable your team to measure social impact, forecast future needs, and optimize
-                            resource allocation.
+                            We help you turn raw field logs and project data into clear, actionable intelligence.
+                            Through
+                            custom dashboards, robust monitoring, learning and evaluation (MLE) metrics, and predictive
+                            machine learning models, we enable your team to measure impact, forecast future needs, and
+                            optimize resource allocation.
                         </p>
                     </div>
                     <div class="flex flex-wrap gap-xs">
@@ -233,8 +313,7 @@
                             class="bg-surface dark:bg-dark-surface dark:text-dark-on-background px-sm py-xs text-[10px] font-label-md rounded-full">ANALYTICS
                             & INSIGHTS</span>
                         <span
-                            class="bg-surface dark:bg-dark-surface dark:text-dark-on-background px-sm py-xs text-[10px] font-label-md rounded-full">MONITORING
-                            & EVAL</span>
+                            class="bg-surface dark:bg-dark-surface dark:text-dark-on-background px-sm py-xs text-[10px] font-label-md rounded-full">MLE</span>
                         <span
                             class="bg-surface dark:bg-dark-surface dark:text-dark-on-background px-sm py-xs text-[10px] font-label-md rounded-full">PREDICTIVE
                             ML</span>
@@ -245,7 +324,7 @@
                     class="p-lg border border-outline/20 hover:border-primary transition-all duration-300 bg-background dark:bg-dark-background rounded-lg flex flex-col justify-between">
                     <div>
                         <div class="flex justify-between items-start mb-md">
-                            <div class="font-label-sm text-secondary">03 / CUSTOM TOOLING</div>
+                            <div class="font-label-sm text-secondary">03 / DEVELOPMENT</div>
                             <span class="material-symbols-outlined text-primary text-[24px]">settings_suggest</span>
                         </div>
                         <h4
@@ -255,7 +334,7 @@
                             We engineer bespoke software tailored to your specific operations. We design web portals for
                             interactive document intelligence, build secure mobile applications incorporating biometric
                             authentication for the field, and automate complex tasks with reliable backend schedules and
-                            event triggers.
+                            event triggers supporting your operations.
                         </p>
                     </div>
                     <div class="flex flex-wrap gap-xs">
@@ -276,13 +355,14 @@
         <section class="px-gutter pb-xxl">
             <div
                 class="max-w-container-max mx-auto bg-inverse-surface dark:bg-dark-surface text-inverse-on-surface dark:text-dark-on-background p-xl md:p-xxl rounded-xl relative overflow-hidden border border-outline/20">
-                <div class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
+                <!-- Need an interesting and catchy visual here. -->
+                <!-- <div class="absolute top-0 right-0 w-1/3 h-full opacity-10 pointer-events-none">
                     <svg viewbox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M47.7,-63.3C61.4,-54.2,71.8,-39.1,76.5,-22.8C81.2,-6.5,80.2,11.1,73,26C65.8,40.9,52.4,53.2,37.3,61.9C22.2,70.6,5.3,75.8,-11.9,73.4C-29.2,71.1,-46.8,61.2,-59.5,46.8C-72.2,32.4,-80.1,13.4,-78.9,-5.2C-77.8,-23.8,-67.7,-42.1,-52.4,-51.1C-37,-60.1,-16.5,-59.7,1.8,-62.1C20.1,-64.5,40.1,-69.6,47.7,-63.3Z"
                             fill="#2aa198" transform="translate(100 100)"></path>
                     </svg>
-                </div>
+                </div> -->
                 <div class="relative z-10 max-w-2xl">
                     <h2 class="font-headline-lg text-headline-lg mb-md text-on-primary dark:text-dark-on-surface">Ready
                         to
@@ -314,10 +394,9 @@
         class="bg-surface dark:bg-dark-surface w-full px-gutter py-xl flex flex-col md:flex-row justify-between items-start gap-lg max-w-container-max mx-auto border-t border-outline/20">
         <div class="flex flex-col gap-md">
             <div class="font-headline-md text-headline-md font-bold text-primary">
-                Good Tech Systems
+                © Good Tech Systems.
             </div>
-            <p class="font-body-md text-on-surface-variant dark:text-dark-on-background max-w-xs">© 2026 Good Tech
-                Systems.</p>
+            <!-- <p class="font-body-md text-on-surface-variant dark:text-dark-on-background max-w-xs">© 2026 Good Tech Systems.</p> -->
             <p class="font-body-md text-on-surface-variant dark:text-dark-on-background max-w-xs">Contact: <a
                     href="mailto:info@goodtech.systems">info@goodtech.systems</a></p>
         </div>
