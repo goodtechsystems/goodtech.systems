@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>OG Image — Good Tech Systems</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;700;800&family=JetBrains+Mono:wght@500&display=swap"
+    rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #073642;
+      font-family: 'Hanken Grotesk', system-ui, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 32px;
+      gap: 24px;
+    }
+
+    .export-instructions {
+      width: 1200px;
+      color: #839496;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      line-height: 1.8;
+      border: 1px dashed #2aa198;
+      border-radius: 6px;
+      padding: 16px 20px;
+    }
+
+    .export-instructions strong {
+      color: #2aa198;
+    }
+
+    .export-instructions code {
+      background: #073642;
+      border: 1px solid #586e75;
+      border-radius: 3px;
+      padding: 1px 5px;
+      font-size: 11px;
+    }
+
+    /* ── The card ─────────────────────────────────────────── */
+    #card {
+      width: 1200px;
+      height: 630px;
+      background: #002b36;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+
+      /* ── Nudge background graphic to align with foreground icon ──
+         --bg-x : positive moves left, negative moves right
+         --bg-y : positive moves down, negative moves up            */
+      --bg-x: -30px;
+      --bg-y: -20px;
+    }
+
+    /* Faint background node network */
+    #card .bg-graphic {
+      position: absolute;
+      right: var(--bg-x);
+      top: calc(50% + var(--bg-y));
+      transform: translateY(-50%);
+      width: 560px;
+      height: 560px;
+      opacity: 0.06;
+      pointer-events: none;
+    }
+
+    /* Left content column */
+    #card .content {
+      position: relative;
+      z-index: 2;
+      padding: 72px 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      max-width: 680px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(42, 161, 152, 0.12);
+      border: 1px solid rgba(42, 161, 152, 0.3);
+      color: #2aa198;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      padding: 6px 14px;
+      border-radius: 4px;
+      margin-bottom: 32px;
+      width: fit-content;
+    }
+
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #2aa198;
+    }
+
+    .headline {
+      font-size: 88px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.0;
+      color: #eee8d5;
+      margin-bottom: 28px;
+    }
+
+    .headline span {
+      color: #2aa198;
+    }
+
+    .tagline {
+      font-size: 22px;
+      font-weight: 400;
+      color: #839496;
+      line-height: 1.5;
+      margin-bottom: 48px;
+      max-width: 520px;
+    }
+
+    .url {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 16px;
+      font-weight: 500;
+      color: #586e75;
+      letter-spacing: 0.04em;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .url-dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #2aa198;
+    }
+
+    /* Right icon */
+    #card .icon-wrap {
+      position: absolute;
+      right: 80px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 340px;
+      height: 340px;
+      opacity: 0.9;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="export-instructions">
+    <strong>How to export as og-image.png:</strong><br>
+    1. Open this file in Chrome at 100% zoom.<br>
+    2. Open DevTools (<code>Cmd+Option+I</code>), click the element picker, then click the card below to select
+    <code>#card</code>.<br>
+    3. In the Elements panel, right-click <code>&lt;div id="card"&gt;</code> → <strong>Capture node
+      screenshot</strong>.<br>
+    4. Save the downloaded file as <code>og-image.png</code> in the project root, then close this file.
+  </div>
+
+  <div id="card">
+
+    <!-- Faint background: large version of the icon network -->
+    <svg class="bg-graphic" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <g stroke="#2aa198" stroke-width="1.5" fill="none">
+        <path d="M 30,35 L 50,52 L 70,35 L 80,55 L 50,85 L 20,55 Z" />
+        <line x1="20" y1="55" x2="50" y2="52" />
+        <line x1="80" y1="55" x2="50" y2="52" />
+        <line x1="50" y1="85" x2="50" y2="52" />
+      </g>
+      <circle cx="30" cy="35" r="4" fill="#2aa198" />
+      <circle cx="70" cy="35" r="4" fill="#2aa198" />
+      <circle cx="20" cy="55" r="4" fill="#2aa198" />
+      <circle cx="80" cy="55" r="4" fill="#2aa198" />
+      <circle cx="50" cy="85" r="5" fill="#2aa198" />
+      <circle cx="50" cy="52" r="8" fill="#cb4b16" />
+    </svg>
+
+    <div class="content">
+      <!-- <div class="badge">
+        <div class="badge-dot"></div>
+        ENGINEERING FOR IMPACT
+      </div> -->
+      <div class="headline">Tech Systems<br>for <span>Good.</span></div>
+      <div class="tagline">Data infrastructure, dashboards, and custom tooling for NGOs — built to hand off cleanly to
+        your team.</div>
+      <div class="url">
+        <div class="url-dot"></div>
+        goodtech.systems
+      </div>
+    </div>
+
+    <!-- Large icon, right side -->
+    <svg class="icon-wrap" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="og-p" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#2aa198" />
+          <stop offset="100%" stop-color="#268bd2" />
+        </linearGradient>
+        <!-- <filter id="og-glow" x="-40%" y="-40%" width="180%" height="180%">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
+          <feMerge>
+            <feMergeNode in="blur" />
+            <feMergeNode in="SourceGraphic" />
+          </feMerge>
+        </filter> -->
+      </defs>
+      <g stroke="#93a1a1" stroke-width="1.5" stroke-opacity="0.25" stroke-dasharray="3,3" fill="none">
+        <path d="M 30,35 L 50,52 L 70,35 L 80,55 L 50,85 L 20,55 Z" />
+        <line x1="20" y1="55" x2="50" y2="52" />
+        <line x1="80" y1="55" x2="50" y2="52" />
+        <line x1="50" y1="85" x2="50" y2="52" />
+      </g>
+      <g stroke="#2aa198" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.9">
+        <path d="M 20,55 L 30,35 L 50,52 L 70,35 L 80,55" />
+        <path d="M 20,55 L 50,85 L 80,55" />
+      </g>
+      <circle cx="30" cy="35" r="5" fill="#586e75" stroke="#eee8d5" stroke-width="1.5" />
+      <circle cx="70" cy="35" r="5" fill="#586e75" stroke="#eee8d5" stroke-width="1.5" />
+      <circle cx="20" cy="55" r="4.5" fill="url(#og-p)" stroke="#eee8d5" stroke-width="1.5" />
+      <circle cx="80" cy="55" r="4.5" fill="url(#og-p)" stroke="#eee8d5" stroke-width="1.5" />
+      <circle cx="50" cy="85" r="6" fill="url(#og-p)" stroke="#eee8d5" stroke-width="2" />
+      <circle cx="50" cy="52" r="9" fill="#cb4b16" stroke="#eee8d5" stroke-width="2.5" filter="url(#og-glow)" />
+      <circle cx="50" cy="52" r="14" fill="none" stroke="#cb4b16" stroke-width="1" opacity="0.3"
+        stroke-dasharray="2,4" />
+    </svg>
+
+  </div>
+
+</body>
+
+</html>

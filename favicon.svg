@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Background rounded square -->
+  <rect width="32" height="32" rx="7" fill="#002b36"/>
+
+  <!-- Heart outline — two solid path segments, no dashes, no small nodes -->
+  <!-- Upper arch: left-side → left-lobe-peak → center-dip → right-lobe-peak → right-side -->
+  <path d="M 5,19 L 9,11 L 16,17 L 23,11 L 27,19"
+        fill="none" stroke="#2aa198" stroke-width="2.25"
+        stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Lower V: left-side → bottom-tip → right-side -->
+  <path d="M 5,19 L 16,27 L 27,19"
+        fill="none" stroke="#2aa198" stroke-width="2.25"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Central hub — the one node that survives at 16×16 -->
+  <circle cx="16" cy="17" r="3.5" fill="#cb4b16"/>
+</svg>

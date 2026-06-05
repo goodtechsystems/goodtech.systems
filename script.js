@@ -116,6 +116,26 @@ tailwind.config = {
 // ==========================================================================
 // INTERACTIVE FUNCTIONS
 // ==========================================================================
+function openPrivacyModal() {
+    document.getElementById('privacy-modal').classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+}
+
+function closePrivacyModal() {
+    document.getElementById('privacy-modal').classList.add('hidden');
+    document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closePrivacyModal();
+});
+
+function handleConsent(choice) {
+    gtag('consent', 'update', { 'analytics_storage': choice });
+    localStorage.setItem('ga-consent', choice);
+    document.getElementById('consent-banner').classList.add('hidden');
+}
+
 function toggleDarkMode() {
     document.documentElement.classList.toggle('dark');
     const icon = document.querySelector('[onclick="toggleDarkMode()"] span');
@@ -124,6 +144,23 @@ function toggleDarkMode() {
     } else {
         icon.innerText = 'dark_mode';
     }
+}
+
+function toggleMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const icon = document.getElementById('mobile-menu-icon');
+    const isOpen = !menu.classList.contains('hidden');
+    menu.classList.toggle('hidden');
+    icon.innerText = isOpen ? 'menu' : 'close';
+    document.getElementById('mobile-menu-btn').setAttribute('aria-label', isOpen ? 'Open menu' : 'Close menu');
+}
+
+function closeMobileMenu() {
+    const menu = document.getElementById('mobile-menu');
+    const icon = document.getElementById('mobile-menu-icon');
+    menu.classList.add('hidden');
+    icon.innerText = 'menu';
+    document.getElementById('mobile-menu-btn').setAttribute('aria-label', 'Open menu');
 }
 
 // Simple parallax effect for floating card
@@ -136,8 +173,26 @@ document.addEventListener('mousemove', (e) => {
     }
 });
 
+// FAQ accordion
+document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.faq-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const body = btn.nextElementSibling;
+            const icon = btn.querySelector('.material-symbols-outlined');
+            const isOpen = !body.classList.contains('hidden');
+            body.classList.toggle('hidden');
+            icon.style.transform = isOpen ? '' : 'rotate(180deg)';
+            btn.setAttribute('aria-expanded', String(!isOpen));
+        });
+    });
+});
+
 // Dynamic Navigation Active State Tracking
 document.addEventListener('DOMContentLoaded', () => {
+    if (!localStorage.getItem('ga-consent')) {
+        document.getElementById('consent-banner').classList.remove('hidden');
+    }
+
     const navLinks = document.querySelectorAll('#nav-links .nav-link');
     const sections = document.querySelectorAll('section[id]');
 
