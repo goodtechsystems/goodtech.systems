@@ -34,49 +34,47 @@
         class="bg-background dark:bg-dark-surface border-b border-surface-container-highest dark:border-outline/20 docked full-width top-0 sticky z-50 flat no shadows">
         <nav class="flex justify-between items-center w-full px-gutter py-md max-w-container-max mx-auto">
             <div class="font-display-lg text-headline-md font-bold text-primary">
-                Good Tech Systems [TEMPLATE SITE]
+                Good Tech Systems
             </div>
-            <div class="hidden md:flex items-center gap-lg">
-                <a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-md transition-colors duration-200"
-                    href="#">Mission</a>
-                <a class="text-on-surface-variant dark:text-dark-on-background font-medium font-label-md hover:text-secondary transition-colors duration-200"
-                    href="#">Services</a>
-                <a class="text-on-surface-variant dark:text-dark-on-background font-medium font-label-md hover:text-secondary transition-colors duration-200"
-                    href="#">Impact</a>
-                <a class="text-on-surface-variant dark:text-dark-on-background font-medium font-label-md hover:text-secondary transition-colors duration-200"
-                    href="#">Team</a>
+            <div class="hidden md:flex items-center gap-lg" id="nav-links">
+                <a class="nav-link border-b-2 pb-1 font-label-md transition-all duration-200 text-primary font-bold border-primary"
+                    href="#hero">Mission</a>
+                <a class="nav-link border-b-2 pb-1 font-label-md transition-all duration-200 text-on-surface-variant dark:text-dark-on-background border-transparent font-medium hover:text-secondary"
+                    href="#what-we-do">Services</a>
+                <a class="nav-link border-b-2 pb-1 font-label-md transition-all duration-200 text-on-surface-variant dark:text-dark-on-background border-transparent font-medium hover:text-secondary"
+                    href="#who-we-are">Team</a>
             </div>
             <div class="flex items-center gap-md">
                 <button aria-label="Toggle theme"
                     class="p-xs rounded-full hover:bg-surface-container dark:hover:bg-inverse-surface/50 transition-colors"
                     onclick="toggleDarkMode()">
-                    <span class="material-symbols-outlined text-primary">dark_mode</span>
+                    <span class="material-symbols-outlined text-primary">light_mode</span>
                 </button>
-                <button
-                    class="bg-primary text-on-primary font-label-md px-md py-sm rounded-lg active:scale-95 transition-transform">
-                    Consultation
-                </button>
+                <a href="https://calendar.app.google/7Dz4ncZP9dsvgcyD8" target="_blank" rel="noopener noreferrer">
+                    <button
+                        class="bg-primary text-on-primary font-label-md px-md py-sm rounded-lg active:scale-95 transition-transform">
+                        Consultation
+                    </button>
+                </a>
             </div>
         </nav>
     </header>
     <main>
         <!-- Hero Section -->
-        <section class="relative min-h-[819px] flex items-center pt-xxl pb-xxl px-gutter">
+        <section id="hero" class="relative min-h-[819px] flex items-center pt-xxl pb-xxl px-gutter">
             <div class="max-w-container-max mx-auto w-full grid md:grid-cols-2 items-center gap-xl">
                 <div class="z-10">
                     <div
                         class="inline-flex items-center gap-sm bg-surface text-secondary px-sm py-xs mb-md rounded-sm font-label-sm border border-secondary/20">
                         <span class="material-symbols-outlined text-[18px]">verified</span>
-                        [UNDER CONSTRUCTION] ENGINEERING FOR GLOBAL GOOD
+                        ENGINEERING FOR IMPACT
                     </div>
                     <h1 class="font-display-lg text-display-lg text-on-background dark:text-dark-on-surface mb-lg">
-                        Engineering for <span class="text-primary">Impact.</span> Empowering NGOs with Global Tech
-                        Solutions.
+                        Tech Systems for <span class="text-primary">Good.</span>
                     </h1>
                     <p
                         class="font-body-lg text-body-lg text-on-surface-variant dark:text-dark-on-background max-w-xl mb-xl">
-                        We bridge the gap between high-level engineering and humanitarian needs. Technical excellence
-                        with a heart for global progress.
+                        We bridge the gap between precision analytics, high-level engineering and humanitarian needs.
                     </p>
                     <div class="flex flex-wrap gap-md">
                         <button
@@ -113,7 +111,7 @@
             </div>
         </section>
         <!-- Who We Are Section (Bento Grid Pattern) -->
-        <section class="bg-surface dark:bg-dark-surface py-xxl px-gutter">
+        <section class="bg-surface dark:bg-dark-surface py-xxl px-gutter" id="who-we-are">
             <div class="max-w-container-max mx-auto">
                 <div class="mb-xl text-center md:text-left">
                     <h2 class="font-headline-lg text-headline-lg text-on-background dark:text-dark-on-surface mb-sm">Who
@@ -170,7 +168,7 @@
             </div>
         </section>
         <!-- What We Do Section (Technical Grid) -->
-        <section class="py-xxl px-gutter max-w-container-max mx-auto">
+        <section class="py-xxl px-gutter max-w-container-max mx-auto" id="what-we-do">
             <div class="flex flex-col md:flex-row justify-between items-end mb-xl gap-md">
                 <div class="max-w-xl">
                     <h2 class="font-headline-lg text-headline-lg text-on-background dark:text-dark-on-surface mb-sm">
@@ -180,66 +178,96 @@
                         are rooted
                         in rigorous engineering standards applied to complex global challenges.</p>
                 </div>
-                <a class="font-label-md text-primary flex items-center gap-xs hover:underline" href="#">
-                    EXPLORE ALL SERVICES <span class="material-symbols-outlined">north_east</span>
-                </a>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
-                <!-- Service 1 -->
+                <!-- Service 1: Digitization -->
                 <div
-                    class="p-lg border border-outline/20 hover:border-primary transition-colors bg-background dark:bg-dark-background rounded-lg">
-                    <div class="font-label-sm text-secondary mb-md">01 / STRATEGY</div>
-                    <h4 class="font-headline-md text-headline-md mb-md text-on-background dark:text-dark-on-surface">
-                        Technical
-                        Strategy</h4>
-                    <p class="text-on-surface-variant dark:text-dark-on-background mb-xl">Multi-year roadmaps for
-                        digital
-                        transformation in the non-profit sector. Aligning mission with modern stack capabilities.</p>
+                    class="p-lg border border-outline/20 hover:border-primary transition-all duration-300 bg-background dark:bg-dark-background rounded-lg flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-md">
+                            <div class="font-label-sm text-secondary">01 / DIGITIZATION</div>
+                            <span class="material-symbols-outlined text-primary text-[24px]">document_scanner</span>
+                        </div>
+                        <h4
+                            class="font-headline-md text-headline-md mb-md text-on-background dark:text-dark-on-surface">
+                            Digitization</h4>
+                        <p class="text-on-surface-variant dark:text-dark-on-background mb-xl">
+                            We bridge the physical-digital gap by turning paper records, forms, and archives into
+                            secure, cloud-accessible databases. Using AI-powered optical character recognition (OCR) and
+                            vision-language models, we extract critical information and connect field tools like ODK
+                            Collect and CommCare directly to your servers.
+                        </p>
+                    </div>
                     <div class="flex flex-wrap gap-xs">
                         <span
-                            class="bg-surface dark:bg-dark-surface dark:text-dark-on-background px-sm py-xs text-[10px] font-label-md rounded-full">AUDIT</span>
+                            class="bg-surface dark:bg-dark-surface dark:text-dark-on-background px-sm py-xs text-[10px] font-label-md rounded-full">AI-OCR
+                            & VISION</span>
                         <span
-                            class="bg-surface dark:bg-dark-surface dark:text-dark-on-background px-sm py-xs text-[10px] font-label-md rounded-full">ROADMAP</span>
+                            class="bg-surface dark:bg-dark-surface dark:text-dark-on-background px-sm py-xs text-[10px] font-label-md rounded-full">ODK
+                            & COMMCARE SYNC</span>
                         <span
-                            class="bg-surface dark:bg-dark-surface dark:text-dark-on-background px-sm py-xs text-[10px] font-label-md rounded-full">STAKEHOLDERS</span>
+                            class="bg-surface dark:bg-dark-surface dark:text-dark-on-background px-sm py-xs text-[10px] font-label-md rounded-full">DATA
+                            PIPELINES</span>
                     </div>
                 </div>
-                <!-- Service 2 -->
+                <!-- Service 2: Data Science -->
                 <div
-                    class="p-lg border border-outline/20 hover:border-primary transition-colors bg-background dark:bg-dark-background rounded-lg">
-                    <div class="font-label-sm text-secondary mb-md">02 / BUILD</div>
-                    <h4 class="font-headline-md text-headline-md mb-md text-on-background dark:text-dark-on-surface">
-                        Systems
-                        Engineering</h4>
-                    <p class="text-on-surface-variant dark:text-dark-on-background mb-xl">Developing robust,
-                        high-availability
-                        platforms for crisis response, health monitoring, and resource distribution.</p>
+                    class="p-lg border border-outline/20 hover:border-primary transition-all duration-300 bg-background dark:bg-dark-background rounded-lg flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-md">
+                            <div class="font-label-sm text-secondary">02 / DATA SCIENCE</div>
+                            <span class="material-symbols-outlined text-primary text-[24px]">insights</span>
+                        </div>
+                        <h4
+                            class="font-headline-md text-headline-md mb-md text-on-background dark:text-dark-on-surface">
+                            Data Science</h4>
+                        <p class="text-on-surface-variant dark:text-dark-on-background mb-xl">
+                            We turn raw field logs and project data into clear, actionable intelligence. Through custom
+                            dashboards, robust monitoring and evaluation (M&E) metrics, and predictive machine learning
+                            models, we enable your team to measure social impact, forecast future needs, and optimize
+                            resource allocation.
+                        </p>
+                    </div>
                     <div class="flex flex-wrap gap-xs">
                         <span
-                            class="bg-surface dark:bg-dark-surface dark:text-dark-on-background px-sm py-xs text-[10px] font-label-md rounded-full">CLOUD</span>
+                            class="bg-surface dark:bg-dark-surface dark:text-dark-on-background px-sm py-xs text-[10px] font-label-md rounded-full">ANALYTICS
+                            & INSIGHTS</span>
                         <span
-                            class="bg-surface dark:bg-dark-surface dark:text-dark-on-background px-sm py-xs text-[10px] font-label-md rounded-full">SECURITY</span>
+                            class="bg-surface dark:bg-dark-surface dark:text-dark-on-background px-sm py-xs text-[10px] font-label-md rounded-full">MONITORING
+                            & EVAL</span>
                         <span
-                            class="bg-surface dark:bg-dark-surface dark:text-dark-on-background px-sm py-xs text-[10px] font-label-md rounded-full">MOBILE</span>
+                            class="bg-surface dark:bg-dark-surface dark:text-dark-on-background px-sm py-xs text-[10px] font-label-md rounded-full">PREDICTIVE
+                            ML</span>
                     </div>
                 </div>
-                <!-- Service 3 -->
+                <!-- Service 3: Custom Tooling -->
                 <div
-                    class="p-lg border border-outline/20 hover:border-primary transition-colors bg-background dark:bg-dark-background rounded-lg">
-                    <div class="font-label-sm text-secondary mb-md">03 / INSIGHT</div>
-                    <h4 class="font-headline-md text-headline-md mb-md text-on-background dark:text-dark-on-surface">
-                        Data
-                        Architecture</h4>
-                    <p class="text-on-surface-variant dark:text-dark-on-background mb-xl">Transforming raw field data
-                        into
-                        actionable intelligence through modern data warehousing and AI-ready pipelines.</p>
+                    class="p-lg border border-outline/20 hover:border-primary transition-all duration-300 bg-background dark:bg-dark-background rounded-lg flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-md">
+                            <div class="font-label-sm text-secondary">03 / CUSTOM TOOLING</div>
+                            <span class="material-symbols-outlined text-primary text-[24px]">settings_suggest</span>
+                        </div>
+                        <h4
+                            class="font-headline-md text-headline-md mb-md text-on-background dark:text-dark-on-surface">
+                            Custom Tooling</h4>
+                        <p class="text-on-surface-variant dark:text-dark-on-background mb-xl">
+                            We engineer bespoke software tailored to your specific operations. We design web portals for
+                            interactive document intelligence, build secure mobile applications incorporating biometric
+                            authentication for the field, and automate complex tasks with reliable backend schedules and
+                            event triggers.
+                        </p>
+                    </div>
                     <div class="flex flex-wrap gap-xs">
                         <span
-                            class="bg-surface dark:bg-dark-surface dark:text-dark-on-background px-sm py-xs text-[10px] font-label-md rounded-full">ETL</span>
+                            class="bg-surface dark:bg-dark-surface dark:text-dark-on-background px-sm py-xs text-[10px] font-label-md rounded-full">DOCUMENT
+                            INTELLIGENCE</span>
                         <span
-                            class="bg-surface dark:bg-dark-surface dark:text-dark-on-background px-sm py-xs text-[10px] font-label-md rounded-full">BI</span>
+                            class="bg-surface dark:bg-dark-surface dark:text-dark-on-background px-sm py-xs text-[10px] font-label-md rounded-full">BIOMETRIC
+                            AUTH</span>
                         <span
-                            class="bg-surface dark:bg-dark-surface dark:text-dark-on-background px-sm py-xs text-[10px] font-label-md rounded-full">ANALYTICS</span>
+                            class="bg-surface dark:bg-dark-surface dark:text-dark-on-background px-sm py-xs text-[10px] font-label-md rounded-full">PROCESS
+                            AUTOMATION</span>
                     </div>
                 </div>
             </div>
@@ -259,12 +287,24 @@
                     <h2 class="font-headline-lg text-headline-lg mb-md text-on-primary dark:text-dark-on-surface">Ready
                         to
                         scale your impact?</h2>
-                    <p class="font-body-lg text-body-lg opacity-80 mb-xl">Schedule a technical discovery session with
-                        our lead engineers today. Let's solve the hard problems together.</p>
-                    <button
-                        class="bg-secondary text-on-secondary px-xl py-md rounded-lg font-label-md hover:scale-105 transition-transform shadow-lg">
-                        Book a Consultation
-                    </button>
+                    <p class="font-body-lg text-body-lg opacity-80 mb-xl">Let's solve the hard problems together.</p>
+                    <div class="flex flex-col sm:flex-row items-center gap-md sm:gap-lg">
+                        <a class="w-full sm:w-auto text-center" href="mailto:info@goodtech.systems">
+                            <button
+                                class="w-full sm:w-auto bg-secondary text-on-secondary px-xl py-md rounded-lg font-label-md hover:scale-105 transition-transform shadow-lg">
+                                Email Us
+                            </button>
+                        </a>
+                        <span
+                            class="text-on-primary dark:text-dark-on-background opacity-80 font-label-md py-xs">or</span>
+                        <a class="w-full sm:w-auto text-center" href="https://calendar.app.google/7Dz4ncZP9dsvgcyD8"
+                            target="_blank" rel="noopener noreferrer">
+                            <button
+                                class="w-full sm:w-auto bg-secondary text-on-secondary px-xl py-md rounded-lg font-label-md hover:scale-105 transition-transform shadow-lg">
+                                Meet with Us
+                            </button>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -276,9 +316,10 @@
             <div class="font-headline-md text-headline-md font-bold text-primary">
                 Good Tech Systems
             </div>
-            <p class="font-body-md text-on-surface-variant dark:text-dark-on-background max-w-xs">© 2024 Good Tech
-                Systems.
-                Engineering for Impact.</p>
+            <p class="font-body-md text-on-surface-variant dark:text-dark-on-background max-w-xs">© 2026 Good Tech
+                Systems.</p>
+            <p class="font-body-md text-on-surface-variant dark:text-dark-on-background max-w-xs">Contact: <a
+                    href="mailto:info@goodtech.systems">info@goodtech.systems</a></p>
         </div>
         <div class="grid grid-cols-2 gap-xl">
             <div class="flex flex-col gap-sm">

@@ -135,3 +135,70 @@ document.addEventListener('mousemove', (e) => {
         card.style.transform = `translate(${moveX}px, ${moveY}px)`;
     }
 });
+
+// Dynamic Navigation Active State Tracking
+document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('#nav-links .nav-link');
+    const sections = document.querySelectorAll('section[id]');
+
+    // Intersection Observer to highlight current section on scroll
+    const observerOptions = {
+        root: null,
+        rootMargin: '-30% 0px -40% 0px', // triggers when section is in the middle window view
+        threshold: 0
+    };
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                navLinks.forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href === `#${id}`) {
+                        // Set Active classes
+                        link.classList.add('text-primary', 'font-bold', 'border-primary');
+                        link.classList.remove('text-on-surface-variant', 'dark:text-dark-on-background', 'border-transparent', 'font-medium');
+                    } else {
+                        // Set Inactive classes
+                        link.classList.remove('text-primary', 'font-bold', 'border-primary');
+                        link.classList.add('text-on-surface-variant', 'dark:text-dark-on-background', 'border-transparent', 'font-medium');
+                    }
+                });
+            }
+        });
+    }, observerOptions);
+
+    sections.forEach(section => {
+        sectionObserver.observe(section);
+    });
+
+    // Handle direct click in case observer is delayed or user is at scroll boundaries
+    navLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            const href = link.getAttribute('href');
+            if (href.startsWith('#')) {
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    
+                    // Smooth scroll natively (will fall back to CSS behavior)
+                    target.scrollIntoView({ behavior: 'smooth' });
+
+                    // Manually force active state instantly on click
+                    navLinks.forEach(l => {
+                        if (l === link) {
+                            l.classList.add('text-primary', 'font-bold', 'border-primary');
+                            l.classList.remove('text-on-surface-variant', 'dark:text-dark-on-background', 'border-transparent', 'font-medium');
+                        } else {
+                            l.classList.remove('text-primary', 'font-bold', 'border-primary');
+                            l.classList.add('text-on-surface-variant', 'dark:text-dark-on-background', 'border-transparent', 'font-medium');
+                        }
+                    });
+
+                    // Update hash without jump
+                    history.pushState(null, null, href);
+                }
+            }
+        });
+    });
+});

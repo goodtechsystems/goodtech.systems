@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 /* ==========================================================================
    COLOR CONSTANTS (CSS Custom Properties)
    Modify these values to test changes to the custom CSS styles.
